@@ -1,0 +1,45 @@
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url("../fonts/GothamBold.eot");
+  src: url("../fonts/GothamBold.eot") format("embedded-opentype"), url("../fonts/GothamBold.woff2") format("woff2"), url("../fonts/GothamBold.woff") format("woff"), url("../fonts/GothamBold.ttf") format("truetype"), url("../fonts/GothamBold.svg#GothamBold") format("svg"); }
+@font-face {
+  font-family: 'GothamBook';
+  src: url("../fonts/GothamBook.eot");
+  src: url("../fonts/GothamBook.eot") format("embedded-opentype"), url("../fonts/GothamBook.woff2") format("woff2"), url("../fonts/GothamBook.woff") format("woff"), url("../fonts/GothamBook.ttf") format("truetype"), url("../fonts/GothamBook.svg#GothamBook") format("svg"); }
+ 
+@font-face {
+  font-family: 'GothamMedium';
+  src: url("../fonts/GothamMedium.eot");
+  src: url("../fonts/GothamMedium.eot") format("embedded-opentype"), url("../fonts/GothamMedium.woff2") format("woff2"), url("../fonts/GothamMedium.woff") format("woff"), url("../fonts/GothamMedium.ttf") format("truetype"), url("../fonts/GothamMedium.svg#GothamMedium") format("svg"); }
+ 
+ 
+ @font-face {
+  font-family: 'AcuraBespokeLight';
+  src: url("../fonts/AcuraBespokeLight.eot");
+  src: url("../fonts/AcuraBespokeLight.eot") format("embedded-opentype"), url("../fonts/AcuraBespokeLight.woff2") format("woff2"), url("../fonts/AcuraBespokeLight.woff") format("woff"), url("../fonts/AcuraBespokeLight.ttf") format("truetype"), url("../fonts/AcuraBespokeLight.svg#AcuraBespokeLight") format("svg");
+}
+
+@font-face {
+  font-family: 'AcuraBespokeRegular';
+  src: url("../fonts/AcuraBespokeRegular.eot");
+  src: url("../fonts/AcuraBespokeRegular.eot") format("embedded-opentype"), url("../fonts/AcuraBespokeRegular.woff2") format("woff2"), url("../fonts/AcuraBespokeRegular.woff") format("woff"), url("../fonts/AcuraBespokeRegular.ttf") format("truetype"), url("../fonts/AcuraBespokeRegular.svg#AcuraBespokeRegular") format("svg");
+}
+
+@font-face {
+  font-family: 'AcuraBespokeBold';
+  src: url("../fonts/AcuraBespokeBold.eot");
+  src: url("../fonts/AcuraBespokeBold.eot") format("embedded-opentype"), url("../fonts/AcuraBespokeBold.woff2") format("woff2"), url("../fonts/AcuraBespokeBold.woff") format("woff"), url("../fonts/AcuraBespokeBold.ttf") format("truetype"), url("../fonts/AcuraBespokeBold.svg#AcuraBespokeBold") format("svg");
+}
+
+@font-face {
+  font-family: 'AcuraBespokeBook';
+  src: url("../fonts/AcuraBespokeBook.eot");
+  src: url("../fonts/AcuraBespokeBook.eot") format("embedded-opentype"), url("../fonts/AcuraBespokeBook.woff2") format("woff2"), url("../fonts/AcuraBespokeBook.woff") format("woff"), url("../fonts/AcuraBespokeBook.ttf") format("truetype"), url("../fonts/AcuraBespokeBook.svg#AcuraBespokeBook") format("svg");
+}
+
+@font-face {
+  font-family: 'FuturaLTBook';
+  src: url("../fonts/FuturaLTBook.eot");
+  src: url("../fonts/FuturaLTBook.eot") format("embedded-opentype"), url("../fonts/FuturaLTBook.woff2") format("woff2"), url("../fonts/FuturaLTBook.woff") format("woff"), url("../fonts/FuturaLTBook.ttf") format("truetype"), url("../fonts/FuturaLTBook.svg#FuturaLTBook") format("svg");
+}
