@@ -3,17 +3,17 @@
 */
 
  
- 
-body {
-	margin: 0;
-	padding: 0;
-}
 .afc-design-page {
 	max-width: 520px;
 	margin: 0 auto;
 	color: #000;
 	font-size: 15px;
-	font-family: 'GothamBook', Arial, Helvetica, sans-serif
+	font-family: 'GothamBook', Arial, Helvetica, sans-serif;
+	margin-bottom: -15px;
+}
+.afc-design-page p {
+	margin-bottom: 15px;
+	line-height: 20px;
 }
 .afc-design-page .paddingAll30 {
 	padding: 30px;
@@ -35,6 +35,9 @@ body {
 .afc-design-page .white-text {
 	color: #fff;
 }
+.afc-design-page .white-text h1 {
+	color: #fff;
+}
 .afc-design-page .white-text a {
 	text-decoration: underline;
 	color: #fff !important;
@@ -45,6 +48,9 @@ body {
 .afc-design-page .font20 {
 	font-size: 20px;
 	line-height: 26px;
+}
+.afc-design-page .section1 .font20 {
+	font-family: 'AcuraBespokeRegular', Arial, Helvetica, sans-serif
 }
 .afc-design-page .font10 {
 	font-size: 10px;
@@ -61,6 +67,9 @@ body {
 	margin-bottom: 20px;
 	line-height: 20px;
 }
+.afc-design-page .uppercase {
+	text-transform: uppercase
+}
 .afc-design-page h1, .afc-design-page h2, .afc-design-page h3, .afc-design-page h4, .afc-design-page h5, .afc-design-page h6 {
 	margin: 0;
 	padding: 0;
@@ -68,6 +77,7 @@ body {
 	text-transform: uppercase;
 	font-weight: normal;
 	font-family: 'AcuraBespokeRegular';
+	width: auto;
 }
 .afc-design-page h1 {
 	font-size: 48px;
@@ -88,6 +98,13 @@ body {
 	list-style: none;
 	display: inline-block;
 	text-align: left;
+}
+.afc-design-page .list01 a {
+	text-decoration: none;
+	color: #fff;
+}
+.afc-design-page .list01.black-color a {
+	color: #000;
 }
 .afc-design-page .list01 li {
 	margin-bottom: 20px;
@@ -113,10 +130,13 @@ body {
 	padding: 0;
 	list-style: none;
 }
+.afc-design-page .list02 li a {
+	text-decoration: none
+}
 .afc-design-page .list02 li {
 	margin-bottom: 5px;
 	color: #000;
-	font-size: 14px;
+	font-size: 15px;
 }
 .afc-design-page .list02 li:last-child {
 	margin-bottom: 0
@@ -183,14 +203,14 @@ body {
 .afc-design-page .blue-bg {
 	background: #94bdd4;
 }
-.afc-design-page .comman-cont-section {
+.afc-design-page .common-content-section {
 	line-height: 22px;
 }
-.afc-design-page .comman-cont-section a {
+.afc-design-page .common-content-section a {
 	color: #000;
 	text-decoration: underline
 }
-.afc-design-page .comman-cont-section h3 {
+.afc-design-page .common-content-section h3 {
 	margin-bottom: 25px;
 }
 .afc-design-page .black-bg {
@@ -204,6 +224,7 @@ body {
 	margin: 0;
 	padding: 0;
 	margin-left: 25px;
+	list-style: disc;
 }
 .afc-design-page .list-style03 li {
 	margin-bottom: 5px;

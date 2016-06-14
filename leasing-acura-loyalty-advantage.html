@@ -1,76 +1,544 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>shopping tools leasing</title>
+<!--[if IE]><link rel="shortcut icon" href="/static/img/global/favicon.ico"><![endif]-->
+<link rel="icon" href="/static/img/global/favicon.ico">
+<!--
+.31
+6/12/2016 11:32:32 PM PDT
+http%3a%2f%2fwww.acurafinancialservices.com%3a80%2fleasing
+Release: 01202016.1
+//-->
+
+<title>Acura Lease Information | Official Acura Leasing Rates and Deals</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="Official Acura lease information, rates, and application information for new and certified pre-owned Acura vehicles." />
+<meta name="robots" content="NOODP,index,follow" />
+<meta name="google-site-verification" content="NCoAqXJ7bvMn7b3F3SCepgWQmbE26DmGNOb_-Mi2iPw" />
+<meta property="og:url" content="http://www.acurafinancialservices.com" />
+<meta property="og:title" content="Acura Financial Services: Financing, Lease and Warranty Options" />
+<meta property="og:description" content="Provides Acura financing, lease and extended warranty options to help you when considering a new Acura lease or purchase." />
+<meta property="og:image" content="http://www.acurafinancialservices.com/static/img/global/afs_200x200.jpg" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]><![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.acurafinancialservices.com/combres.axd//coreCss/986228693/"/>
+<link rel="stylesheet" type="text/css" href="http://www.acurafinancialservices.com/combres.axd//skinCss/-1999948576/"/>
+<link rel="stylesheet" type="text/css" href="http://www.acurafinancialservices.com/combres.axd//printCss/-1567898606/" media="print"/>
+<link rel="stylesheet" type="text/css" href="http://www.acurafinancialservices.com/combres.axd//leasingCss/527/"/>
+<script language="javascript" type="text/javascript">
+        function getDocHeight(doc) {
+            doc = doc || document;
+            // stackoverflow.com/questions/1145850/
+            var body = doc.body, html = doc.documentElement;
+            var height = Math.max(body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight);
+            return height;
+        }
+
+        function setIframeHeight(id) {
+            var ifrm = document.getElementById(id);
+            var doc = ifrm.contentDocument ? ifrm.contentDocument :
+                    ifrm.contentWindow.document;
+            ifrm.style.visibility = 'hidden';
+            ifrm.style.height = "10px"; // reset to minimal height ...
+            // IE opt. for bing/msn needs a bit added or scrollbar appears
+            ifrm.style.height = getDocHeight(doc) + 4 + "px";
+            ifrm.style.visibility = 'visible';
+
+        }
+
+
+        function SingleSignOnToLink(type, accountNumber) {
+            var isMobile = false; //getCookie("isMobile");
+            var targetURL = "";
+
+            if((isMobile != null) || (isMobile != undefined))
+            {
+                if ((isMobile)) {
+                    targetURL = (accountNumber != null) ? "/SSO/login?type=" + type.toUpperCase() + "&ac=" + accountNumber : "/SSO/login?type=" + type.toUpperCase();
+                    var salesforceWindow = window.open(targetURL, "salesforcesso", "toolbar=no, menubar=no, status=no");
+                    salesforceWindow.focus();
+                }
+                else {
+                    switch (type.toUpperCase()) {
+                        case "CPS":
+                            location.href = (accountNumber != null) ? "/MyProfile/communication-preferences?ac=" + accountNumber : "/MyProfile/communication-preferences";
+
+                            break;
+                        case "EPY":
+                            location.href = (accountNumber != null) ? "/MyAccount/easypay?ac=" + accountNumber : "/MyAccount/easypay";
+
+                            break;
+                        case "MAP":
+                            location.href = (accountNumber != null) ? "/MyAccount/make-a-payment?ac=" + accountNumber : "/MyAccount/make-a-payment";
+
+                            break;
+                        case "MBA":
+                            location.href = (accountNumber != null) ? "/MyAccount/manage-bank-accounts?ac=" + accountNumber : "/MyAccount/manage-bank-accounts";
+
+                            break;
+                        case "MPO":
+                            location.href = (accountNumber != null) ? "/MyAccount/make-a-payoff?ac=" + accountNumber : "/MyAccount/make-a-payoff";
+
+                            break;
+                        case "MPT":
+                            location.href = (accountNumber != null) ? "/MyAccount/manage-payments?ac=" + accountNumber : "/MyAccount/manage-payments";
+
+                            break;
+                        case "PPT":
+                            location.href = (accountNumber != null) ? "/MyAccount/pending-payments?ac=" + accountNumber : "/MyAccount/pending-payments";
+
+                            break;
+                        default:
+                            location.href = (accountNumber != null) ? "/MyAccount/make-a-payment?ac=" + accountNumber : "/MyAccount/make-a-payment";
+
+                            break;
+
+                    }
+                }
+            }
+
+        }
+
+        function handleEmailBounceBack(acctNum, ackUrl) {
+            if (ackUrl != null && ackUrl != '') {
+               ackUrl = ackUrl.replace(/___/g, '%'); 
+               //alert(ackUrl);
+                $.ajax({
+                    url: ackUrl,
+                    type: 'GET',
+                    dataType: 'html',
+                    cache: false,
+                    async: false,
+                    success: function (data) {
+                        //alert(data);
+                    },
+                    error: function (xhr, status, msg) {
+                        //alert(msg);					  
+                    }
+                });
+            }
+            SingleSignOnToLink('CPS', acctNum.trim());
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+
+        function handleMessage( e ) {
+	          //alert('Message received: ' + e.data + '. You will be redirected to home page');
+	          
+              var message = e.data;
+              //TODO: need to parse the data if needed.
+              switch(message.toUpperCase())
+              {
+                    case "ACCOUNTOVERVIEW":
+                          location.href= 'http://www.acurafinancialservices.com/MyAccount/Index';
+                          break;
+                    case "MPM":
+                          location.href = 'http://www.acurafinancialservices.com/MyAccount/made-a-promise';
+                          break;
+                    case "CCS":
+                          location.href = 'http://www.acurafinancialservices.com/MyAccount/client-service';
+                          break;
+                   default:
+                           //location.href = 'http://www.acurafinancialservices.com';
+                           break;
+              }
+	        }
+
+	        function addEvent(evnt, elem, func) {
+	           if (elem.addEventListener)  // W3C DOM
+		          elem.addEventListener(evnt,func,false);
+	           else if (elem.attachEvent) { // IE DOM
+		          elem.attachEvent("on"+evnt, func);
+	           }
+	           else { // No much to do
+		          elem[evnt] = func;
+	           }
+	        }
+
+	        //window.addEventListener( "message", handleMessage, false );
+	        addEvent("message", window, handleMessage);
+    </script>
+    <!--AFC Design CSS-->
 <link rel="stylesheet" type="text/css" href="static/css/fonts.css">
 <link rel="stylesheet" type="text/css" href="static/css/page/afc-design.css"/>
 </head>
-<body>
-<div class="afc-design-page">  
+<!--[if lt IE 7]><body id="leasing" class="template-2 ie ie6 lte9 lte8 lte7"><![endif]-->
+<!--[if IE 7]><body id="leasing" class="template-2 ie ie7 lte9 lte8 lte7"><![endif]-->
+<!--[if IE 8]><body id="leasing" class="template-2 ie ie8 lte9 lte8"><![endif]-->
+<!--[if IE 9]><body id="leasing" class="template-2 ie ie9 lte9"><![endif]-->
+<!--[if gt IE 9]><body id="leasing" class="template-2"><![endif]-->
+<!--[if !IE]><!-->
+<body id="leasing" class="template-2">
+<!--<![endif]-->
+<div id="page">
+  <div id="header"> <a class="logo" href="/"><span> Acura Lease Information | Official Acura Leasing Rates and Deals</span></a>
+    <div class="global-nav">
+      <ul class="login-nav">
+        <li class="first"><a id="link-nav-register" class="link-register" href="/Registration/reg-step-one-disclaimer" ><span>Register</span></a></li>
+        <li class="last"> <a id="link-nav-login" class="link-login" href="/account-management" ><span>Log In</span></a> </li>
+      </ul>
+      <form id="global-search" action="">
+        <span class="field"><span class="input-text"><span>
+        <input id="input-nav-search" type="text" value="" />
+        </span> </span></span><a id="btn-nav-search" href="#"><span>Search</span></a>
+      </form>
+      <ul class="link-nav">
+        <li class="first"><a target="Acura" id="link-brand" href="http://www.acura.com"><span>Acura.com</span></a></li>
+        <li><a target="MyAcura" id="link-owner" href="http://owners.acura.com"><span>Acura Owners</span></a></li>
+        <li><a id="link-investor" href="http://www.acurafinancialservices.com/ir"><span>Investor Relations</span></a></li>
+        <li><a id="link-help" href="/help/faqs"><span>Help</span></a></li>
+        <li class="last"><a id="link-contact" href="/contact-us"><span>Contact Us</span></a></li>
+      </ul>
+    </div>
+    <div class="nav">
+      <ul>
+        <li class="first"><a href="/leasing" class=""><span>Leasing</span></a>
+          <div class="sub-nav">
+            <ul>
+              <li><a href="/leasing/new-vehicles" class=""><span>New Vehicles</span></a></li>
+              <li><a href="/leasing/certified-pre-owned" class=""><span>Certified Pre-Owned</span></a></li>
+              <li><a href="/leasing/applying" class=""><span>Applying</span></a></li>
+              <li><a href="/leasing/leasing-faqs" class=""><span>Leasing FAQs</span></a></li>
+              <li><a href="/leasing/end-of-lease" class=""><span>Lease-End Process and Contacts</span></a></li>
+              <li><a href="/leasing/loyalty-advantage" class=""><span>Acura Loyalty Advantage</span></a></li>
+              <li><a href="/leasing/one-pay-lease" class=""><span>One-Pay Lease</span></a></li>
+              <li><a href="/leasing/college-grad-program" class=""><span>College Grad Program</span></a></li>
+              <li><a href="/leasing/military-offer" class=""><span>Military Appreciation</span></a></li>
+              <li><a href="/leasing/maintenance-program"  class=""><span>Maintenance Program</span></a></li>
+              <li><a href="/leasing/service-contracts" class=""><span>Vehicle Service Contracts</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="/finance" class=""><span>Financing</span></a>
+          <div class="sub-nav">
+            <ul>
+              <li><a href="/finance/new-vehicles" class=""><span>New Vehicles</span></a></li>
+              <li><a href="/finance/certified-pre-owned" class=""><span>Certified Pre-Owned</span></a></li>
+              <li><a href="/finance/applying" class=""><span>Applying</span></a></li>
+              <li><a href="/finance/financing-faqs" class=""><span>Financing FAQs</span></a></li>
+              <li><a href="/finance/end-of-financing" class=""><span>End of Financing</span></a></li>
+              <li><a href="/finance/leadership-purchase-plan" class=""><span>Leadership Purchase Plan</span></a></li>
+              <li><a href="/finance/college-grad-program" class=""><span>College Grad Program</span></a></li>
+              <li><a href="/finance/military-offer" class=""><span>Military Appreciation</span></a></li>
+              <li><a href="/finance/maintenance-program"  class=""><span>Maintenance Program</span></a></li>
+              <li><a href="/finance/service-contracts" class=""><span>Vehicle Service Contracts</span></a></li>
+              <li><a href="/finance/gap-insurance" class=""><span>GAP Insurance</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="last">
+          <style type="text/css">
+    span.new {color:#b60202; font-style:italic; padding-left: 2px; font-weight: 600;} 
+</style>
+          <a href="/account-management"><span>Account Management</span></a>
+          <div class="sub-nav">
+            <ul>
+              <li><a href="/account-management/your-statement" title="Your Statement">Your Statement</a></li>
+              <li><a href="/account-management/payment-options" title="Payment Options">Payment Options</a></li>
+              <li><a href="/account-management/payment-addresses" title="Payment Addresses">Payment Addresses</a></li>
+              <li><a href="/account-management/property-taxes" title="Property Taxes">Property Taxes</a></li>
+              <li><a href="/account-management/printable-forms" title="Printable Forms">Printable Forms</a></li>
+              <li><a href="/account-management/account-faqs" title="Account FAQs">Account FAQs</a></li>
+              <li><a href="/account-management/lease-maturity-contacts" title="Lease Maturity Contacts">Lease Maturity Contacts</a></li>
+              <li><a href="/account-management/client-services" title="Client Service">Client Service</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="content"> <img id="print-logo" src="/static/img/global/afs-logo.gif" />
+    <div class="row row-1">
+      <div class="col col-1">
+        <div class="secondary-nav first">
+          <h3><a href="/leasing">Leasing</a></h3>
+          <ul>
+            <li class="first"><a href="/leasing/new-vehicles" title="New Vehicles">New Vehicles</a></li>
+            <li><a href="/leasing/certified-pre-owned" title="Second Item">Certified Pre-Owned</a></li>
+            <li> <a Title="Applying" href="/leasing/applying">Applying</a> </li>
+            <li class=""><a href="/leasing/leasing-faqs" title="Leasing FAQs">Leasing FAQs</a></li>
+            <li> <a href="/leasing/end-of-lease" title="Lease-End Process and Contacts">Lease-End Process and Contacts</a> </li>
+            <li class=""><a href="/leasing/loyalty-advantage" title="Acura Loyalty Advantage">Acura Loyalty Advantage</a></li>
+            <li> <a href="/leasing/one-pay-lease" title="One-Pay Lease">One-Pay Lease</a> </li>
+            <li><a href="/leasing/college-grad-program" title="College Grad Program">College Grad Program</a></li>
+            <li><a href="/leasing/military-offer" title="Military Appreciation">Military Appreciation</a></li>
+            <li><a href="/leasing/maintenance-program" title="Maintenance Program">Maintenance Program</a></li>
+            <li class="last"> <a href="/leasing/service-contracts" title="Vehicle Service Contracts">Vehicle Service Contracts</a> </li>
+          </ul>
+        </div>
+        <div class="tertiary-nav">
+          <h3>Shopping Tools</h3>
+          <ul>
+            <li class="first"><a class="" href="/shopping-tools/apply-credit" title="Apply for Credit Pre-Approval" id="leftNavApplyCredit">Apply for Credit Pre-Approval</a></li>
+            <li><a class="" href="/shopping-tools/apply-credit-status" title="Check Your Application Status" id="leftNavApplicationStatus">Check Your Application Status</a></li>
+            <li> <a id="newLeftNavCalculators" onclick="toggle_visibility('calculatorsSubMenu')">Calculators</a> </li>
+            <div id="calculatorsSubMenu" style="display:block;padding-left:10px;">
+              <ul>
+                <li><a id="lefNavNewVehicleCalculator" href="http://www.acura.com/tools/shopping/Calculators.aspx"  target="_blank" title="New Vehicles">New Vehicles</a></li>
+                <li><a id="lefNavCertifiedVehicleCalculator" href="http://www.acura.com/tools/cpo/Calculators.aspx" target="_blank" title="Certified Pre-Owned">Certified Pre-Owned</a></li>
+              </ul>
+            </div>
+            <li> <a href="/shopping-tools/current-offers-new-vehicles" title="Current Offers" id="leftNavCurrentOffers">Current Offers</a> </li>
+            <li><a href="/shopping-tools/locate-a-dealer" title="Locate an Acura Dealer" id="leftNavLocateDealer">Locate an Acura Dealer</a></li>
+            <li class="last"><a href="/shopping-tools/lease-or-finance" title="Lease or Finance" id="leftNavLeaseOrFinance">Lease or Finance?</a></li>
+          </ul>
+        </div>
+        <script type="text/javascript">
+    function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+    toggle_visibility('calculatorsSubMenu');
+</script> 
+      </div>
+      <div class="col col-2">
+        <h1>Leasing</h1>
+        <ul id="page-tools">
+          <li class="first"><a class="link link-email" href="#" rel="#mod-email-page">Email</a></li>
+          <li class="last"><a class="link link-print" href="#" rel="#mod-print-friendly">Printer Friendly Version</a></li>
+        </ul>
+        <div id="mod-email-page" class="modal modal-1"> <a class="link link-close" href="#"><span>close</span></a>
+          <h3>Email a link to this page</h3>
+          <p>We do not store or share these email addresses.</p>
+          <form id="form-email-page" action="">
+            <div class="required">* = Required</div>
+            <div class="fieldset">
+              <div class="field field-1">
+                <label for="input-email-page-from-name">From (Name)*:</label>
+                <span class="input-text"> <span>
+                <input id="input-email-page-from-name" name="name" type="text" />
+                </span> </span> </div>
+            </div>
+            <div class="fieldset">
+              <div class="field field-1">
+                <label for="input-email-page-from-email">From (Email Address)*:</label>
+                <span class="input-text"> <span>
+                <input id="input-email-page-from-email" name="from" type="text" />
+                </span> </span> </div>
+            </div>
+            <div class="fieldset">
+              <div class="field field-1">
+                <label for="input-email-page-to-email">To (Email Address)*:</label>
+                <span class="input-text"> <span>
+                <input id="input-email-page-to-email" name="to" type="text" />
+                </span> </span> </div>
+            </div>
+            <div class="fieldset">
+              <div class="field field-1">
+                <label for="input-email-page-comments">Comments:</label>
+                <div class="input-textarea">
+                  <div>
+                    <textarea id="input-email-page-comments" name="comments" cols="53" rows="9"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input id="input-email-page-url" name="url" type="hidden" />
+            <div class="form-actions"> <a id="btn-mail-page-send" class="btn btn-1" href="#"><span>Send</span></a> <a id="btn-mail-page-cancel" class="btn btn-1" href="#"><span>Cancel</span></a> </div>
+          </form>
+        </div>
+        <div id="mod-email-thanks" class="modal modal-1"> <a class="link link-close" href="#"><span>close</span></a>
+          <p>Thank you! Your Message was sent.</p>
+        </div>
+<!--AFS New Content Start-->
+        <div class="afc-design-page"> 
   <!--Section-->
   <section style="background-image:url(static/images/ala-head-img.jpg)" class="paddingAll30 section1 white-text">
+    <h1><span class="cap">acura</span><br>
+      loyalty<br>
+      advantage</h1>
+    <p class="font20 uppercase">An exclusive <span class="cap">Acura</span><br>
+      Luxury Lease<sup>™</sup> benefit.</p>
     <div class="content-div">
-      <h1><span class="cap">acura</span><br> 
-loyalty
-advantage</h1>
-	  <p class="font20">An exclusive Acura<br>
-Luxury Lease™ benefit.</p>
-       <p>Besides just turning heads at the valet stand, there are many exclusive perks that come with leasing an Acura vehicle.</p> 
-
-<p>With your Acura Luxury Lease are the exclusive benefits of Acura Loyalty Advantage1. With Acura Loyalty Advantage, you can have the flexibility to drive over or under your contracted miles.</p>
+      <p>Besides just turning heads at the valet stand, there are many exclusive perks that come with leasing an Acura vehicle.</p>
+      <p>With your Acura Luxury Lease are the exclusive benefits of Acura Loyalty Advantage<sup>1</sup>. With Acura Loyalty Advantage, you can have the flexibility to drive over or under your contracted miles.</p>
     </div>
   </section>
   
-   <!--Section-->
-  <section class="paddingAll30 comman-cont-section blue-bg">
+  <!--Section-->
+  <section class="paddingAll30 common-content-section blue-bg">
     <h3>Mileage Forgiveness&reg;</h3>
-    If you exceed your contracted lease miles, you can be forgiven for half of your excess mileage (up to 7,500 miles)2 with Mileage Forgiveness. Plus, you can receive 1,000 additional miles just for leasing with Acura Financial Services.
-</section>
-  
-  
+    If you exceed your contracted lease miles, you can be forgiven for half of your excess mileage (up to 7,500 miles)<sup>2</sup> with Mileage Forgiveness. Plus, you can receive 1,000 additional miles just for leasing with Acura Financial Services. </section>
   
   <!--Section-->
-  <section style="background-image:url(static/images/ala-car-img.jpg);" class="paddingAll30 comman-cont-section bg"  >
-     <h3>Momentum Miles&reg;</h3>
-     <div style="min-height:120px;"></div>
-     If you end up driving fewer than your contracted lease miles, Momentum Miles can allow you to roll over your unused lease mileage to your next Acura Luxury Lease (up to 15,000 miles)3.
-  </section>
+  <section style="background-image:url(static/images/ala-car-img.jpg);" class="paddingAll30 common-content-section bg"  >
+    <h3>Momentum Miles&reg;</h3>
+    <div style="min-height:120px;"></div>
+    If you end up driving fewer than your contracted lease miles, Momentum Miles can allow you to roll over your unused lease mileage to your next Acura Luxury Lease (up to 15,000 miles)<sup>3</sup>. </section>
   
   <!--Section-->
-  <section class="paddingAll30 comman-cont-section blue-bg">
+  <section class="paddingAll30 common-content-section blue-bg">
     <h3>Features and Benefits</h3>
-<p> Flexibility to drive over or under your contracted miles.</p>
-
-<p>Up to 7,500 excess miles waived if you are over your contracted miles<sup>2</sup>.</p>
-
-<p>Receive 1,000 additional miles on a new lease from Acura Financial Services if you were over your contracted miles on your previous lease.</p>
-
-<p>Up to 15,000 miles rolled over to your next leased Acura if you are under contracted miles<sup>3</sup>.</p>
- 
+    <p> Flexibility to drive over or under your contracted miles.</p>
+    <p>Up to 7,500 excess miles waived if you are over your contracted miles<sup>2</sup>.</p>
+    <p>Receive 1,000 additional miles on a new lease from Acura Financial Services if you were over your contracted miles on your previous lease.</p>
+    <p>Up to 15,000 miles rolled over to your next leased Acura if you are under contracted miles<sup>3</sup>.</p>
   </section>
   
-  
-  
   <!--Section-->
-  <section class="paddingAll30 comman-cont-section gray-bg">
+  <section class="paddingAll30 common-content-section gray-bg">
     <ul class="list02">
-      <li>View current lease offers  <img src="static/images/sm-b-arrow.png" /></li>
-      <li>Find a dealer near you <img src="static/images/sm-b-arrow.png" /></li>
-      <li>See our most frequently asked questions about Acura Loyalty Advantage <img src="static/images/sm-b-arrow.png" /></li>
+      <li><a href="#">View current lease offers <img alt="View current lease offers" src="static/images/sm-b-arrow.png" /></a></li>
+      <li><a href="#">Find a dealer near you <img alt="Find a dealer near you" src="static/images/sm-b-arrow.png" /></a></li>
+      <li><a href="#">See our most frequently asked questions about Acura Loyalty Advantage <img alt="See our most frequently asked questions about Acura Loyalty Advantage" src="static/images/sm-b-arrow.png" /></a></li>
     </ul>
   </section>
   
-  <!--Section--> 
+  <!--Section-->
   <section class="paddingAll30 black-bg footer-section">
-  	<p><sup>1</sup> Acura Loyalty Advantage (ALA) eligibility is subject to verification and credit approval by Acura Financial Services (AFS). To obtain ALA benefits, clients must lease a new vehicle from AFS and undergo standard AFS verification and credit approval requirements. ALA benefits are only available within 180 days of the scheduled maturity date and 180 days after lease termination. AFS may terminate ALA benefits at any time, without notice.</p>
-
-<p><sup>2</sup> If you are over your contracted lease miles, half of all your excess miles, up to 7,500 miles, are eligible for waiver if you finance a lease or retail purchase of a new Acura from a participating Acura dealer through Acura Financial Services.</p>
-
-<p><sup>3</sup> If you are under mileage, up to 15,000 miles can be rolled over to your next leased Acura financed by Acura Financial Services if the new Acura is leased from a participating Acura dealer. ©2012 Acura Financial Services® is a DBA of American Honda Finance Corporation and both are service marks of Honda Motor Co., Ltd. Acura, the stylized “A” logo, Acura Luxury Lease, Mileage Forgiveness, and Momentum Miles are trademarks of Honda Motor Co., Ltd.</p>
+    <p><sup>1</sup> Acura Loyalty Advantage (ALA) eligibility is subject to verification and credit approval by Acura Financial Services (AFS). To obtain ALA benefits, clients must lease a new vehicle from AFS and undergo standard AFS verification and credit approval requirements. ALA benefits are only available within 180 days of the scheduled maturity date and 180 days after lease termination. AFS may terminate ALA benefits at any time, without notice.</p>
+    <p><sup>2</sup> If you are over your contracted lease miles, half of all your excess miles, up to 7,500 miles, are eligible for waiver if you finance a lease or retail purchase of a new Acura from a participating Acura dealer through Acura Financial Services.</p>
+    <p><sup>3</sup> If you are under mileage, up to 15,000 miles can be rolled over to your next leased Acura financed by Acura Financial Services if the new Acura is leased from a participating Acura dealer. ©2012 Acura Financial Services® is a DBA of American Honda Finance Corporation and both are service marks of Honda Motor Co., Ltd. Acura, the stylized “A” logo, Acura Luxury Lease, Mileage Forgiveness, and Momentum Miles are trademarks of Honda Motor Co., Ltd.</p>
   </section>
 </div>
+<!--AFS New Content End-->
+        
+        
+      </div>
+      <div class="col col-3">
+        <div id="mod-lease-payment-calculator-link" class="mod mod-1  first">
+          <h3>Lease Payment Calculator</h3>
+          <a id="LeasePaymentCalculatorLinkclick" href="/shopping-tools/calculators-new-vehicles" class="link link-action-1">Calculate Your Payments<em></em></a> </div>
+        <div id="mod-current-lease-offers" class="mod mod-1 ">
+          <h3>Current Lease Offers</h3>
+          <a id="CurrentLeaseOffersclick" href="/shopping-tools/current-offers-new-vehicles" class="link link-action-1">See All Acura Lease Offers<em></em></a> </div>
+        <div id="mod-related-faqs" class="mod mod-1">
+          <h3>Related FAQs</h3>
+          <a class="link link-action-1" href="/help/leasing">All Leasing FAQs<em></em></a> </div>
+        <div id="mod-ready-to-apply" class="mod mod-1  last">
+          <h3>Ready to Apply?</h3>
+          <p>Apply for Credit Pre-Approval</p>
+          <a id="ReadyToApplyclick" href="/shopping-tools/apply-credit" class="btn btn-1"><span>Apply Online</span></a> <a id= "ReadyToApplypdf" href="http://www.acurafinancialservices.com/static/pdf/AFS_LEASE_LOAN_APPLICATION_102014.PDF" class="link link-action-1" target="_blank">Download a Pre-Approval Application<em></em></a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="nav">
+      <ul>
+        <li><a href="/help/about-us"><span>About Us</span></a></li>
+        <li class="first"><a href="/help/site-map" class=""><span>Site Map</span></a></li>
+        <li><a href="/help/faqs"><span>FAQs</span></a></li>
+        <li><a href="/help/privacy-policy"><span>Privacy Policy</span></a></li>
+        <li><a href="/help/terms-and-conditions"><span>Legal Terms and Conditions</span></a></li>
+        <li><span>&copy;2016
+          Acura</span></li>
+        <li class="last"><span>Acura Financial Services is a DBA of American Honda Finance Corporation (AHFC)</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="mod-nav-register" class="modal modal-1"> <a class="link link-close" href="#"><span>close</span></a>
+  <h3> Submit Finance Account Number</h3>
+  <p> Register your Financial Services account to access our convenient online account tools. Once registered, you can:</p>
+  <ul class="list-bullet">
+    <li>Make payments online</li>
+    <li>View statements</li>
+    <li>View transaction history</li>
+    <li>Update account profile information</li>
+    <li>Receive email notification when your statements are available</li>
+  </ul>
+  <form id="form-nav-register" action="/Registration/reg-step-one-disclaimer" method="post">
+    <div id="nav-register-error" class="error-messages"> </div>
+    <div class="fieldset">
+      <div class="field">
+        <label for="input-account-number"> Please Enter Your Financial Services Account Number:</label>
+        <div class="input input-text"> <span>
+          <input id="input-account-number" name="account-num" type="text" />
+          </span> </div>
+      </div>
+    </div>
+    <div class="form-actions"> <a id="btn-register-submit" class="btn btn-1" href="#"><span>Submit</span></a> </div>
+  </form>
+  <div class="btn-verisign"> 
+    <script language="javascript" src="https://seal.entrust.net/seal.js?domain=www.acurafinancialservices.com&img=11"></script> 
+    <a href="http://www.entrust.net">SSL</a> 
+    <script language="javascript" type="text/javascript">            goEntrust();</script> 
+  </div>
+</div>
+<div id="mod-login-faqs" class="modal modal-1"> <a class="link link-close" href="#"><span>close</span></a>
+  <h3> Log-in FAQs</h3>
+  <p> <strong>When I try to log in, the system doesn't recognize me. Why not?</strong></p>
+  <p> You may have mistyped your username (Acura ID), email address or password. If you try again and are unsuccessful, click the "Forgot your username (Acura ID) or password?" link to reset your password.</p>
+  <p> If you are using your email address to log in, please make sure that you are using your "website email address" that you used to setup your account and not your "financial services email address" that is used for receiving statements and correspondence.</p>
+  <p> Please note: If you have previously checked the box marked "Remember Me," you must still enter your password to log in.</p>
+  <p> <strong>Do you recommend checking the "Remember Me" box on the log-in page?</strong></p>
+  <p> When you check this box, your username (Acura ID) or email address is stored in a cookie on your computer, and is filled in automatically each time you return to our website. You must still enter your password to log in.</p>
+  <p> Please Note: We recommend this option if you are the only person who uses your computer. To protect the privacy of your personal information, we do not recommend using this option if you are accessing this site from a public or shared computer.</p>
+</div>
+<div id="mod-transaction-faqs" class="modal modal-1"> <a class="link link-close" href="#"><span>close</span></a>
+  <h3> Transaction History FAQs</h3>
+  <p> <strong>How often are updates posted to the online transaction history?</strong></p>
+  <p> Our system is updated at the end of each business day and will appear on your history<br />
+    the following business day.</p>
+  <p> <strong>Why isn't the information updated instantly in your system?</strong></p>
+  <p> The technology we use to transmit a day's worth of account updates as a single "batch"<br />
+    is more reliable and more secure than transmitting each update individually.</p>
+  <p> <strong>Why doesn't my online transaction history show my last payment?</strong></p>
+  <p> It often takes several days to receive and process a payment. Once the payment is<br />
+    reflected in our system, it will appear in your transaction history on the next business day.<br />
+    This will not be the case if you are viewing your online current statement.</p>
+</div>
+<div id="mod-loginID-helper" class="modal modal-1"> <a class="link link-close" href="#"><span>close</span></a>
+  <p class="topSpace"> The Acura ID is your personal username. This ID, along with your password, can be <br />
+    used to access a number of Honda or Acura web sites and mobile applications.</p>
+</div>
+<div id="mod-print-friendly" class="modal modal-1"> <a class="link link-close" href="#"><span>close</span></a> <a class="link link-print" href="#">Print</a>
+  <div id="print-preview"> </div>
+</div>
+<a class="timeout-ui-trigger" rel="#mod-session-timeout" href="#" style="display:none">click</a>
+<div id="mod-session-timeout" class="modal modal-4"> <a id="close-session-timeout" class="link link-close" href="#" style="display:none"> <span>close</span> </a>
+  <p class="topSpace">Your session will timeout in five minutes. Please click <a id="ping" href="#">here</a> to continue working.</p>
+</div>
+<div id="popPromoOverlay"> </div>
+<div id="popPromo" class="article">
+  <div class="title">Now Available on Your AFS Account:</div>
+  <div><span class="subtitle">•	Schedule Payments – </span>Make your payments same-day or schedule them for a future date.</div>
+  <div><span class="subtitle">•	Manage Payments – </span>View, modify and cancel payments.</div>
+  <div><span class="subtitle">•	Payment Notifications – </span>Receive payment reminders and other payment notifications via email and/or text. The choice is yours.</div>
+  <div><span class="subtitle">•	EasyPay<sup>SM</sup> Made Easy – </span>Enjoy more flexible EasyPay automatic payment options, including selecting a withdrawal date that works best for you.</div>
+  <div><span class="subtitle">•	Mobile Friendly – </span>Make your payments on-the-go with our mobile enhanced web pages.</div>
+  <div class="btnContainer"><a id="btn-Close" class="btn btn-1" href="javascript:closePromo()"><span>Close</span></a></div>
+</div>
+<script type="text/javascript" src="http://www.acurafinancialservices.com/combres.axd//coreJs/47001285/"></script> 
+<script type="text/javascript" src="http://www.acurafinancialservices.com/combres.axd//skinJs/-478426594/"></script> 
+<script type="text/javascript" src="http://www.acurafinancialservices.com/combres.axd//leasingJs/527/"></script>
+<input id="input-login-count" name="input-login-count" type="hidden" value="0" />
+<script type="text/javascript">
+    function ReadConfigSettings() {
+        return "AHMAFSPROD";
+    }
+</script> 
+<script type="text/javascript" src="http://www.acurafinancialservices.com/static/js/s_code.js"></script>
+<div> 
+  <!-- SiteCatalyst code version: H.24.4.Copyright 1996-2012 Adobe, Inc. All Rights ReservedMore info available at http://www.omniture.com --> 
+  <script type="text/javascript">
+var omniData = {};
+omniData.pageName="LEASING LANDING";
+omniData.channel="LEASING";
+omniData.prop11="PAGES";
+omniData.prop37="HTTP://WWW.ACURAFINANCIALSERVICES.COM/LEASING";
+omniData.events="";
+var s_code = $.omniture.triggerPageLoad(omniData); if (s_code) document.write(s_code);
+//-->
+</script><!-- End SiteCatalyst code version: H.24.4. --> 
+</div>
+<noscript>
+<div> <img src="http://omt.honda.com/b/ss/AHMAFSPROD/5/62121?pageName=LEASING+LANDING&amp;ch=LEASING&amp;c11=PAGES&amp;c37=HTTP%3a%2f%2fWWW.ACURAFINANCIALSERVICES.COM%2fLEASING&amp;v5=" alt=""/> </div>
+</noscript>
+<!--/DO NOT REMOVE/-->
+
 </body>
 </html>
